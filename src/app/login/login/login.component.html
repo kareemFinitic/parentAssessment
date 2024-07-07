@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="login-card">
+                
+                <div class="login-left">
+                    <img src="assets/images/login/login.png" alt="login">
+                </div>
+
+                <div class="login-right">
+
+                    <div class="login-content">
+
+                        <p class="login-title">Welcome back!</p>
+
+                        <p class="login-desc">
+                            Please login to access your Spaces Dashboard
+                        </p>
+
+                        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+
+                            <div class="form-group">
+                                <label for="Username">Username</label>
+                                <input  [ngStyle]="{'border-color': loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required') ? 'red' : '#dee2e6'}"
+                                        formControlName="email"
+                                        type="email"
+                                        class="form-control"
+                                        id="Username"
+                                        placeholder="Username...."
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input
+                                        [ngStyle]="{'border-color': loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required') ? 'red' : '#dee2e6'}"
+                                       formControlName="password"
+                                       type="password"
+                                       class="form-control"
+                                       id="Password"
+                                       placeholder="********">
+                            </div>
+
+                            <div class="login-actions">
+
+                                <p class="login-forget">Forget Password?</p>
+
+                                <div>
+                                    <button [disabled]="isLoading" class="login-btn">LOGIN</button>
+                                </div>
+
+                            </div>
+
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
