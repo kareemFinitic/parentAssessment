@@ -23,18 +23,18 @@ Before you begin, ensure you have met the following requirements:
 
 
 
-<!-- to install packages  -->
+### to install packages 
 npm i 
 
-<!-- to run project -->
+### to run project
 npm run 
 
 
 
-<!-- to login in system  -->
- <!-- Email :  -->
+### to login in system 
+  ### Email : 
  eve.holt@reqres.in 
- <!-- Password :  -->
+ ### Password : 
  cityslicka
 
 
